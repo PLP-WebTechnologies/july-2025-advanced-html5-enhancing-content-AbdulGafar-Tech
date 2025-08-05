@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi-Section Web Page with Form</title>
+
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to InfoTech</h1>
+    <p>Explore structured content and submit your details through our form</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#form">Form</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- LIST SECTION -->
+    <section id="lists">
+      <h2>Our Services</h2>
+      <h3>What We Offer:</h3>
+      <ul>
+        <li>Web Development</li>
+        <li>UI/UX Design</li>
+        <li>SEO Optimization</li>
+        <li>Content Strategy</li>
+      </ul>
+
+      <h3>Project Steps:</h3>
+      <ol>
+        <li>Requirement Analysis</li>
+        <li>Design & Prototyping</li>
+        <li>Development</li>
+        <li>Testing & Launch</li>
+      </ol>
+    </section>
+
+    <!-- TABLE SECTION -->
+    <section id="tables">
+      <h2>Team Availability</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Availability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Amina Yusuf</td>
+            <td>Design</td>
+            <td>Mon - Thu</td>
+          </tr>
+          <tr>
+            <td>David Lee</td>
+            <td>Development</td>
+            <td>Tue - Fri</td>
+          </tr>
+          <tr>
+            <td>Fatima Bello</td>
+            <td>Marketing</td>
+            <td>Mon - Wed</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="form">
+      <h2>Contact and Registration Form</h2>
+      <form action="submit.html" method="POST" autocomplete="on">
+        
+        <fieldset>
+          <h2>Personal Information</h2>
+          
+          <label for="fullname">Full Name *</label>
+          <input type="text" id="fullname" name="fullname" placeholder="e.g. John Doe" />
+          <br/><br/>
+        
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="example@domain.com" />
+          <br/><br/>
+
+          <label for="dob">Date of Birth *</label>
+          <input type="date" id="dob" name="dob" required />
+          <br/><br/>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" pattern="^\+?\d{10,15}$" placeholder="+234..." />
+          <br/><br/>
+        </fieldset>
+
+        <fieldset>
+          <h2>Account Preferences</h2>
+
+          <label for="username">Username *</label>
+          <input type="text" id="username" name="username" placeholder="alphanumeric, min 4 chars" />
+          <br/><br/>
+
+          <label for="password">Password *</label>
+          <input type="password" id="password" name="password" required minlength="6" />
+          <br/><br/>
+
+          <label for="role">User Role</label>
+          <select id="role" name="role" required>
+            <br/><br/>
+            <option value="">Select role</option>
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+            <option value="manager">Manager</option>
+          </select>
+
+          <p>Subscribe to newsletter?</p>
+          <label><input type="radio" name="subscribe" value="yes" required /> Yes</label>
+          <label><input type="radio" name="subscribe" value="no" /> No</label>
+
+        </fieldset>
+
+        <fieldset>
+          <h2>Additional Info</h2>
+
+          <label for="bio">Short Bio</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Tell us a bit about yourself..."></textarea>
+
+          <label><input type="checkbox" name="terms" required /> I agree to the terms and conditions *</label>
+        </fieldset>
+
+        <div class="form-buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Clear</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 InfoTech. All rights reserved.</p>
+  </footer>
+</body>
+</html>
